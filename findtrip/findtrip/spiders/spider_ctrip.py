@@ -11,7 +11,8 @@ class CtripSpider(scrapy.Spider):
         sel = scrapy.Selector(response)
         fligint_div = "//div[@id='J_flightlist2']/div"
         dataList = sel.xpath(fligint_div)
-        print dataList,len(dataList)
+        print(dataList)
+        print(len(dataList))
 
         items = []
         for index,each in enumerate(dataList):

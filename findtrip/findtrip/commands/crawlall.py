@@ -31,7 +31,7 @@ class Command(ScrapyCommand):
     def run(self, args, opts):
 	#settings = get_project_settings()
 	
-	spider_loader = self.crawler_process.spider_loader
+    spider_loader = self.crawler_process.spider_loader
 	for spidername in args or spider_loader.list():
 	    print "*********cralall spidername************" + spidername
 	    self.crawler_process.crawl(spidername, **opts.spargs)
